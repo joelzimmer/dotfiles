@@ -1,6 +1,10 @@
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+set modeline
+set modelines=5
 autocmd FileType puppet,ruby,yaml,yml set shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd BufNewFile,BufRead *.t set filetype=ruby
+
 filetype plugin indent on
 syntax on    " Turn syntax highlighting on
 set autoindent    " indent based on the previous line
@@ -52,17 +56,10 @@ endfunction
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_auto_loc_list=1
-
-hi javaScript ctermfg=7 cterm=none 
-hi javaScriptIdentifier ctermfg=7 cterm=none 
-hi javascriptEm ctermfg=7 cterm=none
-hi javascriptOpEm ctermfg=4 
-hi javascriptSubEm ctermfg=4
-hi javascriptGroupEm ctermfg=4 
-hi javaScriptComment ctermfg=4 cterm=none 
-hi javaScriptLineComment ctermfg=4 cterm=none 
-
 hi DiffAdd cterm=bold ctermfg=2 ctermbg=0
 hi DiffChange ctermfg=2 ctermbg=0 cterm=none
 hi DiffDelete ctermfg=2 ctermbg=0 cterm=none
 hi DiffText cterm=bold ctermfg=6 ctermbg=0
+
+map <F2> :NERDTreeToggle<CR>
+map <F5> :!clear; rock run %<CR>
