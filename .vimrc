@@ -61,5 +61,11 @@ hi DiffChange ctermfg=2 ctermbg=0 cterm=none
 hi DiffDelete ctermfg=2 ctermbg=0 cterm=none
 hi DiffText cterm=bold ctermfg=6 ctermbg=0
 
+au FileType * setl sw=2 ts=2 noet
+au FileType javascript,ruby,puppet,yaml setl ts=2 sw=2 sts=2 et
+
+" Automatically trim trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 map <F2> :NERDTreeToggle<CR>
 map <F5> :!clear; rock run %<CR>
