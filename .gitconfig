@@ -26,3 +26,10 @@ old          = magenta
 new          = cyan
 commit       = yellow bold
 whitespace   = reverse black
+
+[alias]
+s   = status
+co  = checkout
+fix = commit --amend -C HEAD
+wc  = whatchanged
+b   = branch -vv
