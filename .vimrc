@@ -79,7 +79,8 @@ set softtabstop=2
 set noexpandtab
 
 " Status bar
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:airline_powerline_fonts = 1
+
 
 au FileType * setl sw=2 ts=2 noet
 au FileType swig,javascript,ruby,puppet,yaml setl ts=2 sw=2 sts=2 et
