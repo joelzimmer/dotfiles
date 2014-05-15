@@ -2,11 +2,18 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 set modeline
 set modelines=5
+
 " Set .json files to javascript syntax
+autocmd BufNewFile,BufRead *.md,*.mh    set filetype=mason
+autocmd BufNewFile,BufRead *.js         set filetype=javascript
 au BufNewFile,BufRead *.json setlocal ft=javascript
 au BufNewFile,BufRead *.swig setlocal ft=htmldjango
+au FileType * setl sw=2 ts=2 noet
+au FileType swig,javascript,ruby,puppet,yaml setl ts=2 sw=2 sts=2 et
+
 autocmd FileType puppet,ruby,yaml,yml set shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 autocmd BufNewFile,BufRead *.t set filetype=ruby
+autocmd FileType javascript set tabstop=2 shiftwidth=2
 
 filetype plugin indent on
 syntax on    " Turn syntax highlighting on
@@ -82,8 +89,7 @@ set noexpandtab
 let g:airline_powerline_fonts = 1
 
 
-au FileType * setl sw=2 ts=2 noet
-au FileType swig,javascript,ruby,puppet,yaml setl ts=2 sw=2 sts=2 et
+
 
 " Automatically trim trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
