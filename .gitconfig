@@ -1,8 +1,25 @@
 [push]
-        default = current
+	default = simple
+
+[core]
+	editor = vim
+
 [user]
 	name = Joel Zimmer
-	email = joel.zimmer@gmail.com
+	#name = Joel Zimmer & Alan Wostenberg
+  #name = Joel Zimmer & Ben Kovacevich
+	#name = Joel Zimmer & Thomas Lackemann
+  #name = Joel Zimmer & Ben Montgomery
+	#name = Joel Zimmer & Vishal Gehani
+  #name = Joel Zimmer & Elliot Foster
+	#name = Joel Zimmer & Zack Penka
+	#name = Joel Zimmer & Geoff Piper
+	#name = Joel Zimmer & Daniel Berry
+	#name = Joel Zimmer & Stefan Woskowiak
+  email = jzimmer@shutterstock.com
+
+[diff]
+	algorithm = patience
 
 # Colours make it easy to see conflicts, changes and index state a lot easier
 [color]
@@ -33,3 +50,38 @@ co  = checkout
 fix = commit --amend -C HEAD
 wc  = whatchanged
 b   = branch -vv
+up = "!git remote update -p; git merge --ff-only @{u}"
+app = add -p
+c2u = merge-base HEAD origin/master
+aa = add --all
+amend = commit --amend
+ap = add -p
+b = branch
+bs = branch -v -v # "branch status"
+cehckout = checkout
+chcekout = checkout
+ci = commit -v
+co = checkout
+dc = diff --cached --patience
+dh1 = diff --patience HEAD~1
+di = diff --patience
+ds = diff --stat=160,120
+fa = fetch --all
+ff = merge --ff-only
+h = !git head
+head = !git l -1
+la = !git l --all
+lg = log --oneline --abbrev-commit --all --graph --decorate
+lgp = log --graph --full-history --all --color --date=short --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+ls = log --stat
+noff = merge --no-ff
+pom = push origin master
+pullff = pull --ff-only
+r = !git l -30
+ra = !git r --al
+st = status
+
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
