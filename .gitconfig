@@ -6,17 +6,7 @@
 
 [user]
 	name = Joel Zimmer
-	#name = Joel Zimmer & Alan Wostenberg
-  #name = Joel Zimmer & Ben Kovacevich
-	#name = Joel Zimmer & Thomas Lackemann
-  #name = Joel Zimmer & Ben Montgomery
-	#name = Joel Zimmer & Vishal Gehani
-  #name = Joel Zimmer & Elliot Foster
-	#name = Joel Zimmer & Zack Penka
-	#name = Joel Zimmer & Geoff Piper
-	#name = Joel Zimmer & Daniel Berry
-	#name = Joel Zimmer & Stefan Woskowiak
-  email = jzimmer@shutterstock.com
+	email = joel.zimmer@gmail.com
 
 [diff]
 	algorithm = patience
